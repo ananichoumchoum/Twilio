@@ -5,7 +5,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Image style={styles.logo} source={require('./assets/logo5.png')}/>
-      <Text style={styles.text}>Direct Medical</Text>
+      <Image style={styles.logo2} source={require('./assets/logo9.png')}/>
       <ActivityIndicator size="large" color="#8200d3"/>
     </View>
   );
@@ -14,7 +14,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#fbeeff',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -28,6 +28,12 @@ const styles = StyleSheet.create({
   logo: {
     width: 250,
     height: 150,
+    marginLeft:90,
+    marginBottom:-13,
+  },
+  logo2: {
+    width: 250,
+    height: 100,
     marginBottom:20,
   }
 });
