@@ -1,11 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import {ActivityIndicator, Text, StyleSheet, View, Image} from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Image style={styles.logo} source={require('./assets/logo5.png')}/>
+      <Text style={styles.text}>Direct Medical</Text>
+      <ActivityIndicator size="large" color="#8200d3"/>
     </View>
   );
 }
@@ -17,4 +18,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  text: {
+    color: "#8200d3", 
+    marginBottom: 20,
+    fontSize: 28,
+    fontWeight: "bold",
+    fontFamily:"Avenir-Roman",
+  },
+  logo: {
+    width: 250,
+    height: 150,
+    marginBottom:20,
+  }
 });
