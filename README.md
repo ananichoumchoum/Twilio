@@ -1,1 +1,1 @@
-Simple application on react native 
+Simple application model on react native 
