@@ -1,20 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { View, StyleSheet } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import LogIn from './screens/LogIn'; 
+import ForgotPassword from './screens/ForgotPassword';
+import OTPConfirmation from './screens/OTPConfirmation';
+import OTPVerification from './screens/OTPVerification';
+import Questions from './screens/Questions';
+import Main from './screens/Main';
+import AddClaim from './components/AddClaim';
+import { ClaimsProvider } from './contexts/ClaimsContext';
 
-export default function App() {
+const Stack = createStackNavigator();
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ClaimsProvider>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="LogIn" screenOptions={{headerTitle: 'Medi-Messaging', headerLeft: null, // Hide the back button by default
+          }}>
+          <Stack.Screen name="LogIn" component={LogIn} options={{ headerShown: false }} />
+          <Stack.Screen name="ForgotPassword" component={ForgotPassword}/>
+          <Stack.Screen name="OTPConfirmation" component={OTPConfirmation}/>
+          <Stack.Screen name="OTPVerification" component={OTPVerification}/>
+          <Stack.Screen name="Questions" component={Questions}/>
+          <Stack.Screen name="Main" component={Main}  options={{ headerShown: false }}/>
+          <Stack.Screen name="AddClaim" component={AddClaim} options={{ headerShown: false }} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </ClaimsProvider>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
