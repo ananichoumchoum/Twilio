@@ -16,7 +16,7 @@ const App = () => {
   return (
     <ClaimsProvider>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="LogIn" screenOptions={{headerTitle: 'Medi-Messaging', headerLeft: null, // Hide the back button by default
+        <Stack.Navigator initialRouteName="LogIn" screenOptions={{headerTitle: 'DirectMedical', headerLeft: null, // Hide the back button by default
           }}>
           <Stack.Screen name="LogIn" component={LogIn} options={{ headerShown: false }} />
           <Stack.Screen name="ForgotPassword" component={ForgotPassword}/>

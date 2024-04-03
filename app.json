@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "directmedical",
+    "slug": "directmedical",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "UIBackgroundModes": [],
+        "UIRequiresFullScreen": true,
+        "NSCameraUsageDescription": "This app requires camera access to function properly.",
+        "NSPhotoLibraryUsageDescription": "This app requires photo library access to function properly.",
+        "NSDocumentPickerUsageDescription": "This app requires document picker access to function properly."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "permissions": ["READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE"]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "This app requires photo library access to function properly."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "This app requires camera access to function properly."
+        }
+      ]
+    ]
+  }
+}
