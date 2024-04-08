@@ -19,7 +19,7 @@ Expo CLI (if you're using Expo for React Native development)
 Start by cloning the repository to your local machine:
 
 
-` git clone [URL_OF_YOUR_REPOSITORY] `  
+` git clone https://github.com/ananichoumchoum/DirectMedical.git `  
 
 ` cd DirectMedical `
 
