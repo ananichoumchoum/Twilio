@@ -157,7 +157,7 @@ export const mainStyles = StyleSheet.create({
   deleteButtonX: {
     position: 'absolute',
     top: -10,
-    left: 56,
+    left: 55,
     width: 30,
     height: 30, 
     backgroundColor: '#D22B2B',
@@ -169,6 +169,17 @@ export const mainStyles = StyleSheet.create({
     color: 'white',
     fontWeight: '900',
     fontFamily: Platform.OS === 'ios' ? 'HelveticaNeue-Bold' : 'Roboto-Bold',
+  },
+  pickerContainer: {
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 5,
+    padding: 10,
+    backgroundColor: '#f9f9f9',
+    marginVertical: 10,
+  },
+  pickerText: {
+    color: '#000',
   },
   container1: {
     flex: 1,
@@ -322,6 +333,7 @@ export const mainStyles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
+    width: 300,
   },
   closeButton: {
     position: 'absolute',

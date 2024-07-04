@@ -160,12 +160,15 @@ const AddClaim = () => {
           <Text style={mainStyles.title}>Upload bills</Text>
           <View style={mainStyles.physicianSection}>
             <Text style={mainStyles.physicianLabel}>Choose a physician:</Text>
-            <RNPickerSelect
-              items={pickerItems}
-              onValueChange={handlePhysicianSelect}
-              placeholder={{ label: 'Select a physician', value: null }}
-              value={selectedPhysician}
-            />
+            <View style={mainStyles.pickerContainer}>
+              <RNPickerSelect
+                items={pickerItems}
+                onValueChange={handlePhysicianSelect}
+                placeholder={{ label: 'Select a physician', value: null }}
+                value={selectedPhysician}
+                style={mainStyles.pickerText}
+              />
+            </View> 
           </View>
           <Text style={mainStyles.commentsLabel}>Notes:</Text>
           <TextInput style={mainStyles.commentsInput} value={comments} onChangeText={setComments} multiline={true} />

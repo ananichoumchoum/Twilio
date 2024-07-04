@@ -86,7 +86,7 @@ const LogInStyles = StyleSheet.create({
   },
   choiceContainer: {
     flexDirection: 'column',
-    marginTop: 10,
+    marginVertical: 10,
     marginBottom: 20,
   },
   choiceBox: {

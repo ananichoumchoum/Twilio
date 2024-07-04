@@ -62,7 +62,7 @@ const LogIn = () => {
   const handleForgotPassword = () => {
     navigation.navigate('ForgotPassword');
   };
-  //to be able to click outside of the keyboard 
+  //to be able to click outside of the keyboard in ios
   const dismissKeyboard = () => {
     Keyboard.dismiss();
   };
