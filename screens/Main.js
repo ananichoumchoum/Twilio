@@ -61,7 +61,7 @@ function Main({ route }) {
       drawerContent={(props) => <CustomDrawerContent {...props} username={username} />}
     >
       <Drawer.Screen name="ClaimHistory" component={ClaimHistory} options={{
-        title: 'Medi-Messaging',
+        title: 'Direct-Medical',
         headerStyle: {
           backgroundColor: '#324260'
         },

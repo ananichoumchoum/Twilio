@@ -1,6 +1,10 @@
 import { StyleSheet } from 'react-native';
 
 const LogInStyles = StyleSheet.create({
+  safeviewContainer: {
+    flex: 1,
+    backgroundColor: '#324260',
+  },
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -25,6 +29,7 @@ const LogInStyles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 5,
     marginTop: 20,
+   // alignItems: 'center',
   },
   image: {
     width: 320,
@@ -34,10 +39,12 @@ const LogInStyles = StyleSheet.create({
     marginTop: 40,
   },
   title: {
-    fontSize: 22,
+    fontSize: 26,
     fontWeight: 'bold',
     color: 'black',
-    margin: 20,
+    marginTop: 20,
+    marginBottom:20,
+    //textAlign: 'center'
   },
   heading: {
     fontSize: 20,
@@ -70,7 +77,7 @@ const LogInStyles = StyleSheet.create({
     fontWeight: 'bold',
   },
   focusedInput: {
-    borderColor: '#324260', // Change border color when focused
+    borderColor: '#324260',
   },
   question: {
     fontSize: 16,
@@ -86,8 +93,8 @@ const LogInStyles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 10,
     padding: 20,
-    margin: 5,
-    width: '80%',
+    marginBottom: 10,
+    //width: '80%',
     flexDirection: 'row',
     alignItems: 'center',
     borderColor: 'grey',
@@ -102,7 +109,7 @@ const LogInStyles = StyleSheet.create({
     alignItems: 'center',
   },
   icon: {
-    marginRight: 10, // Adjust the space between icon and text
+    marginRight: 10,
   },
   choiceText: {
     fontSize: 16,

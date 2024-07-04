@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import LogInStyles from './LogInStyles';
+import LogInStyles from '../styles/LogInStyles';
 
 const OTPConfirmation = () => {
   const [selectedChoice, setSelectedChoice] = useState(null);

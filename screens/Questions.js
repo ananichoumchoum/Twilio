@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard } from 'react-native';
-import LogInStyles from './LogInStyles';
+import { View, Text, TextInput, TouchableOpacity, KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard, Platform } from 'react-native';
+import LogInStyles from '../styles/LogInStyles';
 import { useNavigation, useRoute } from '@react-navigation/native';
 
 const Questions = () => {

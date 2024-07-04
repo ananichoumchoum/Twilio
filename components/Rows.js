@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { mainStyles as styles } from '../screens/MainStyles';
+import { mainStyles as styles } from '../styles/MainStyles';
 
 export function ExpandedRow({ id, status, uploadedBy, notes, fileNames, onShowDetails }) {
   
@@ -12,7 +12,7 @@ export function ExpandedRow({ id, status, uploadedBy, notes, fileNames, onShowDe
         case 'R':
           return 'Received';
         default:
-          return 'Unknown'; // Fallback for unknown status
+          return 'Unknown';
       }
     };
     return (

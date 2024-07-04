@@ -1,7 +1,17 @@
 import React, { useState } from 'react';
-import { View, Text, Image, TextInput, TouchableOpacity, KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import {
+  View,
+  Text,
+  Platform,
+  TextInput,
+  TouchableOpacity,
+  KeyboardAvoidingView,
+  TouchableWithoutFeedback,
+  Keyboard,
+  SafeAreaView,
+} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import LogInStyles from './LogInStyles'; // Import the styles from LogInStyles.js
+import LogInStyles from '../styles/LogInStyles';
 
 const LogIn = () => {
   const [isUsernameFocused, setIsUsernameFocused] = useState(false);
@@ -42,14 +52,12 @@ const LogIn = () => {
       setPasswordError('Password is required');
     }
   
-    // Check if both fields are filled
+    // Proceed with login if there are no errors
     if (username && password) {
-      // If there are no errors and both fields are filled, proceed with login
-      // Perform login or validation logic here
-      navigation.navigate('OTPConfirmation', { username: username });
+      navigation.navigate('OTPConfirmation', { username });
     }
   };
-  
+
 
   const handleForgotPassword = () => {
     navigation.navigate('ForgotPassword');
@@ -61,38 +69,40 @@ const LogIn = () => {
 
   return (
     <TouchableWithoutFeedback onPress={dismissKeyboard}>
-      <KeyboardAvoidingView style={LogInStyles.container} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
-        <View style={LogInStyles.box}>
-        <Text style={LogInStyles.title}>Medi-Messaging Logo</Text>
-          <Text style={LogInStyles.subHeading}>Username: </Text>
-          <TextInput
-            style={[LogInStyles.input, isUsernameFocused && LogInStyles.focusedInput]}
-            placeholder="Username"
-            value={username}
-            onFocus={handleUsernameFocus}
-            onBlur={handleUsernameBlur}
-            onChangeText={(text) => setUsername(text)}
-          />
-          {usernameError && <Text style={{ color: 'red' }}>{usernameError}</Text>}
-          <Text style={LogInStyles.subHeading}>Password: </Text>
-          <TextInput
-            style={[LogInStyles.input, isPasswordFocused && LogInStyles.focusedInput]}
-            placeholder="Password"
-            secureTextEntry={true}
-            value={password}
-            onFocus={handlePasswordFocus}
-            onBlur={handlePasswordBlur}
-            onChangeText={(text) => setPassword(text)}
-          />
-          {passwordError && <Text style={{ color: 'red' }}>{passwordError}</Text>}
-          <TouchableOpacity style={LogInStyles.logInButton} onPress={handleLogIn}>
-            <Text style={LogInStyles.logInButtonText}>Log in</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={handleForgotPassword}>
-            <Text style={LogInStyles.forgotPassword}>Forgot your password?</Text>
-          </TouchableOpacity>
-        </View>
-      </KeyboardAvoidingView>
+      <SafeAreaView style={LogInStyles.safeviewContainer} >
+        <KeyboardAvoidingView style={LogInStyles.container} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
+          <View style={LogInStyles.box}>
+          <Text style={LogInStyles.title}>Direct-Medical</Text>
+            <Text style={LogInStyles.subHeading}>Username: </Text>
+            <TextInput
+              style={[LogInStyles.input, isUsernameFocused && LogInStyles.focusedInput]}
+              placeholder="Username"
+              value={username}
+              onFocus={handleUsernameFocus}
+              onBlur={handleUsernameBlur}
+              onChangeText={(text) => setUsername(text)}
+            />
+            {usernameError && <Text style={{ color: 'red' }}>{usernameError}</Text>}
+            <Text style={LogInStyles.subHeading}>Password: </Text>
+            <TextInput
+              style={[LogInStyles.input, isPasswordFocused && LogInStyles.focusedInput]}
+              placeholder="Password"
+              secureTextEntry={true}
+              value={password}
+              onFocus={handlePasswordFocus}
+              onBlur={handlePasswordBlur}
+              onChangeText={(text) => setPassword(text)}
+            />
+            {passwordError && <Text style={{ color: 'red' }}>{passwordError}</Text>}
+            <TouchableOpacity style={LogInStyles.logInButton} onPress={handleLogIn}>
+              <Text style={LogInStyles.logInButtonText}>Log in</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={handleForgotPassword}>
+              <Text style={LogInStyles.forgotPassword}>Forgot your password?</Text>
+            </TouchableOpacity>
+          </View>
+        </KeyboardAvoidingView>
+      </SafeAreaView>
     </TouchableWithoutFeedback>
   );
 };

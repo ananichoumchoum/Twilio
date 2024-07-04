@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext } from 'react';
-import claimsData from '../components/ClaimData'; 
+import claimsData from '../data/ClaimData'; 
 
 const ClaimsContext = createContext();
 

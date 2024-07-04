@@ -1,6 +1,6 @@
 import React from 'react';
 import { Modal, View, Text, TouchableOpacity, Alert } from 'react-native';
-import { mainStyles as styles } from '../screens/MainStyles';
+import { mainStyles as styles } from '../styles/MainStyles';
 
 function BillDetailsModal({ visible, onClose, onDelete, claim }) {
     const confirmDelete = () => {

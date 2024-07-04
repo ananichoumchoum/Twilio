@@ -1,11 +1,11 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Platform } from 'react-native';
 
 export const mainStyles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 10,
     paddingTop: '20%',
-    justifyContent: 'center', // Center vertically
+    justifyContent: 'center',
   },
   formContainer: {
     backgroundColor: 'white',
@@ -18,7 +18,7 @@ export const mainStyles = StyleSheet.create({
     elevation: 5,
   },
   title: {
-    fontSize: 24,
+    fontSize: 28,
     fontWeight: 'bold',
     marginBottom: 10,
   },
@@ -27,7 +27,7 @@ export const mainStyles = StyleSheet.create({
     marginTop: 20,
   },
   physicianButtonContainer: {
-    position: 'relative', // Ensure the parent container has relative positioning
+    position: 'relative',
   },
   physicianSection: {
     marginVertical: 15,
@@ -52,7 +52,6 @@ export const mainStyles = StyleSheet.create({
   icon: {
     alignSelf: 'center',
     color: '#cdd6da',
-    //marginTop:8,
   },
   icon2: {
     alignSelf: 'center',
@@ -113,8 +112,8 @@ export const mainStyles = StyleSheet.create({
     marginTop: 20,
   },
   cancelLink: { 
-    alignItems: 'center', // Center horizontally
-    justifyContent: 'center', // Center vertically
+    alignItems: 'center',
+    justifyContent: 'center',
     marginTop:20,
   },
   cancelLinkText:{
@@ -128,8 +127,10 @@ export const mainStyles = StyleSheet.create({
     width: 70, 
     height: 70, 
     borderRadius: 10, 
+    marginRight: 10,
   },
   imageContainer: {
+    position: 'relative',
     margin: 4, 
   },
   fileItemContainer: {
@@ -139,32 +140,35 @@ export const mainStyles = StyleSheet.create({
     padding: 10, 
     borderWidth: 1, 
     borderColor: '#ccc', 
-    borderRadius: 5, // Rounded corners for the border, can be adjusted
+    borderRadius: 5,
     backgroundColor: '#fff',
   },
-  // Text style for the document name
   fileItemText: {
-    marginLeft: 10, // Space between the icon and text
+    marginLeft: 10,
     fontSize: 16,
     color: '#000',
-    flexShrink: 1, // Ensure text shrinks if needed to fit in one line
+    flexShrink: 1,
   },
-  deleteButton: {
+  imageRow: {
+    flexDirection: 'row',
+    alignItems: 'center', 
+    marginVertical: 10,
+  },
+  deleteButtonX: {
     position: 'absolute',
-    top: 5,
-    right: 5,
-    width: 20,
-    height: 20,
-    backgroundColor: 'red',
-    borderRadius: 10,
+    top: -10,
+    left: 56,
+    width: 30,
+    height: 30, 
+    backgroundColor: '#D22B2B',
+    borderRadius: 15,
     justifyContent: 'center',
     alignItems: 'center',
-    zIndex: 1,
   },
-  // Style for the "X" inside the delete button
   deleteButtonText: {
     color: 'white',
-    fontWeight: 'bold',
+    fontWeight: '900',
+    fontFamily: Platform.OS === 'ios' ? 'HelveticaNeue-Bold' : 'Roboto-Bold',
   },
   container1: {
     flex: 1,
@@ -178,14 +182,13 @@ export const mainStyles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
-    //marginTop: 10,
   },
   addButton1: {
     backgroundColor: '#324260',
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 10,
-    alignSelf: 'flex-start', // Align to the top left
+    alignSelf: 'flex-start',
     marginBottom: 10,
   },
   addButtonText1: {
@@ -198,12 +201,13 @@ export const mainStyles = StyleSheet.create({
   },
   searchLabel: {
     marginRight: 10,
+    fontSize:16,
   },
   searchInput: {
     flex: 1,
     borderWidth: 1,
     borderColor: '#ccc',
-    paddingVertical: 8,
+    paddingVertical: 10,
     paddingHorizontal: 10,
     borderRadius: 5,
     marginRight: 10,
@@ -223,11 +227,11 @@ export const mainStyles = StyleSheet.create({
     backgroundColor: 'white',
     shadowColor: '#000', 
     shadowOffset: {
-      width: 0, // Horizontal shadow offset
-      height: 2, // Vertical shadow offset
+      width: 0,
+      height: 2, 
     },
-    shadowOpacity: 0.25, // Shadow opacity
-    shadowRadius: 3.84, // Shadow blur radius
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
     elevation: 5,
   },
   row: {

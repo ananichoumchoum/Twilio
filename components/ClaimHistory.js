@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import { ClaimRow, ExpandedRow } from './Rows';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import BillDetailsModal from './BillDetailsModal';
-import { mainStyles as styles } from '../screens/MainStyles';
+import { mainStyles as styles } from '../styles/MainStyles';
 import { useClaims } from '../contexts/ClaimsContext';
 
 const ClaimHistory = ({ route }) => {

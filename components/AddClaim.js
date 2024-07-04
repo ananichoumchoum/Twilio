@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TouchableOpacity, Image, ScrollView, TextInput, Alert } from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import { mainStyles } from '../screens/MainStyles';
+import { mainStyles } from '../styles/MainStyles';
 import * as ImagePicker from 'expo-image-picker';
 import * as DocumentPicker from 'expo-document-picker';
 import RNPickerSelect from 'react-native-picker-select';
 import { useNavigation } from '@react-navigation/native';
-import claimsData from './ClaimData';
+import claimsData from '../data/ClaimData';
 import { useClaims } from '../contexts/ClaimsContext';
 
 const AddClaim = () => {
@@ -182,16 +182,16 @@ const AddClaim = () => {
           </View>
           {images.map((item, index) => {
             return (
-              <View key={index} style={mainStyles.imageContainer}>
+              <View key={index} style={mainStyles.imageRow}>
                 {item.mimeType === 'application/pdf' ? (
                   <View style={mainStyles.fileItemContainer}>
                     <MaterialIcons name="picture-as-pdf" size={60} color="#D32F2F" />
-                    <Text style={mainStyles.fileItemText}>{item.name}</Text> 
+                    <Text style={mainStyles.fileItemText}>{item.name}</Text>
                   </View>
                 ) : (
                   <Image source={{ uri: item.uri }} style={mainStyles.image} />
                 )}
-                <TouchableOpacity onPress={() => removeImage(index)} style={mainStyles.deleteButton}>
+                <TouchableOpacity onPress={() => removeImage(index)} style={mainStyles.deleteButtonX}>
                   <Text style={mainStyles.deleteButtonText}>X</Text>
                 </TouchableOpacity>
               </View>

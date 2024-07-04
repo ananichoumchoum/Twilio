@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, KeyboardAvoidingView, Platform } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
-import LogInStyles from './LogInStyles';
+import LogInStyles from '../styles/LogInStyles';
 
 const OTPVerification = () => {
   const [otp, setOtp] = useState('');
@@ -29,7 +29,7 @@ const OTPVerification = () => {
   return (
     <KeyboardAvoidingView style={LogInStyles.container} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
       <View style={LogInStyles.box}>
-        <Text style={LogInStyles.title}>  Verification code  </Text>
+        <Text style={LogInStyles.title}>Verification code  </Text>
         <Text style={LogInStyles.subHeading}>One Time Password: </Text>
         <TextInput
           style={[LogInStyles.input, otp.length !== 6 && LogInStyles.focusedInput]}

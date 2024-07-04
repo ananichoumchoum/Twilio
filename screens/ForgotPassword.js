@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, KeyboardAvoidingView, Platform } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, KeyboardAvoidingView, Platform } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import LogInStyles from './LogInStyles';
+import LogInStyles from '../styles/LogInStyles';
 
 const ForgotPassword = () => {
   const [isLinkSent, setIsLinkSent] = useState(false);
@@ -9,7 +9,7 @@ const ForgotPassword = () => {
   const navigation = useNavigation();
 
   const handleResetPassword = () => {
-    setIsLinkSent(true); // Here is the logic to reset the password
+    setIsLinkSent(true); 
   };
 
   const handleEmailFocus = () => {
@@ -20,7 +20,7 @@ const ForgotPassword = () => {
     setIsEmailFocused(false);
   };
   const handleGoBack = () => {
-    navigation.navigate('LogIn'); // Navigate back to the Login page
+    navigation.navigate('LogIn');
   };
   return (
     <View style={LogInStyles.container}>
