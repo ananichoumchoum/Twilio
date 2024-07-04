@@ -1,16 +1,16 @@
 # dependencies
-/node_modules
+/node_modules/
 /.expo
 .expo-shared
 
 # IDEs and editors
-.idea
-.vscode
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+.idea/
+.vscode/
+/*.suo
+/*.ntvs*
+/*.njsproj
+/*.sln
+/*.sw?
 
 # OS files
 .DS_Store
@@ -22,9 +22,37 @@ yarn-debug.log*
 yarn-error.log*
 
 # Build output
-android/app/build
-ios/Pods
-ios/build
+/android/app/build/
+/android/app/debug/
+/android/app/release/
+/ios/Pods/
+/ios/build/
+
+# Android specific
+/android/.gradle
+/android/app/debug.keystore
+/android/local.properties
+/android/.idea
+/android/.settings
+/android/*.iml
+
+# Gradle specific
+.gradle
+gradle-app.setting
+gradle.properties
+
+# iOS specific
+ios/Pods/
+ios/build/
+*.xcworkspace
+*.xcodeproj/project.xcworkspace/
+*.xcuserdata/
+*.xcconfig
 
 # Sensitive data
 .env
+
+# Temporary files
+*.tmp
+*.temp
+*.log
