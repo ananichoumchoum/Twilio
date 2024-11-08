@@ -23,7 +23,7 @@
     "expo-splash-screen": "^0.27.5",
     "expo-status-bar": "~1.12.1",
     "react": "18.2.0",
-    "react-native": "^0.75.3",
+    "react-native": "^0.76.0",
     "react-native-camera": "^4.2.1",
     "react-native-document-picker": "^9.0.1",
     "react-native-gesture-handler": "~2.16.1",
